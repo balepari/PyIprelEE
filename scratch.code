@@ -1,0 +1,19 @@
+import MySQLdb
+
+db = MySQLdb.connect("localhost", "root", "Vaccalafica78", "test")
+
+cursor = db.cursor()
+
+cursor.execute("SELECT VERSION()")
+
+data = cursor.fetchone()
+print ("Database version : {} ".format(data))
+
+db.close()
+
+=============================================
+
+var colors = ["red", "green", "blue", "purple"];
+for (var i = 0; i < colors.length; i++) {
+    console.log(colors[i]);
+}
